@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Kalam&family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
     <title>Portfolio3</title>
@@ -11,7 +11,7 @@
     <body>
       <div id="sec-1">
         <svg>
-          <rect id=dash></rect>
+          <rect id="dash"></rect>
         </svg>
         <div class="container">
           <a href="index.html">
@@ -24,42 +24,56 @@
           </div>
         </div></div>
       <div id="sec-2">
-        <section id="container-cards">
-          <div class="cards card-1">
-            <!-- <img src="images/1.jpg" alt="Fleurs de Provence"> -->
-          </div>
-          <div class="cards card-2">
-            <!-- <img src="images/2.jpg" alt="Iceland Eyj"> -->
-          </div>
-          <div class="cards card-3">
-            <!-- <img src="images/3.jpg" alt="Hortensia"> -->
-          </div>
-          <div class="cards card-4">
-            <!-- <img src="images/4.jpg" alt="Beat"> -->
-          </div>
-          <div class="cards card-5">
-            <!-- <img src="images/5.jpg" alt="Squirrel Armored"> -->
-          </div>
-          <div class="cards card-6">
-            <!-- <img src="images/6.jpg" alt="Iceland Mountain"> -->
-          </div>
-          <div class="cards card-7">
-            <!-- <img src="images/7.jpg" alt="Gabor"> -->
-          </div>
-          <div class="cards card-8">
-            <!-- <img src="images/8.jpg" alt="Fire"> -->
-          </div>
-          <div class="cards card-9">
-            <!-- <img src="images/9.jpg" alt="FdP PLV"> -->
-          </div>
-          <div class="cards card-10">
-            <!-- <img src="images/10.jpg" alt="Jetskin"> -->
-          </div>
-          <div class="cards card-11">
-            <!-- <img src="images/11.jpg" alt="Mike Bike"> -->
+        <div id="block-wrapper">
+
+          <div class="block" style="height:320px;">
+            <div class="inner">1</div>
           </div>
 
-        </section>
+          <div class="block" style="height:430px;">
+            <div class="inner">2</div>
+          </div>
+
+          <div class="block" style="height:350px;">
+            <div class="inner">3</div>
+          </div>
+
+          <div class="block" style="height:280px;">
+            <div class="inner">4</div>
+          </div>
+
+          <div class="block" style="height:320px;">
+            <div class="inner">5</div>
+          </div>
+
+          <div class="block" style="height:310px;">
+            <div class="inner">6</div>
+          </div>
+
+          <div class="block" style="height:360px;">
+            <div class="inner">7</div>
+          </div>
+
+          <div class="block" style="height:270px;">
+            <div class="inner">8</div>
+          </div>
+
+          <div class="block" style="height:360px;">
+            <div class="inner">9</div>
+          </div>
+
+          <div class="block" style="height:420px;">
+            <div class="inner">10</div>
+          </div>
+
+          <div class="block" style="height:190px;">
+            <div class="inner">11</div>
+          </div>
+
+          <div class="block" style="height:270px;">
+            <div class="inner">12</div>
+          </div>
+        </div>
         <!-- <div class="c-cards">
           <div class="col-1">
             <div class="creative">
@@ -96,6 +110,23 @@
           <p>I help you to design what's in your head and make it beautiful. For more than ten years I challenge myself to discover many tips to improve my skills on many fields. I've been working on agencies, start-up and on my own. Now I am a developper thanks to 'Le Wagon' and I want to help graphic designers to improve their skills, feedbacks they get and they give and get a job in agencies or being freelance. Interested ? check out <a href="www.thegraphicus.com"><b>www.thegraphicus.com</b></a> to get more informations</p>
         </div>
       </div>
+      <script>
+        const COL_COUNT = 3;
+        const col_heights = [], container = document.getElementById('block-wrapper');
+
+        for (let i = 0; i <= COL_COUNT; i++) {
+          col_heights.push(0);
+        }
+
+        for (let i = 0; i < container.children.length; i++) {
+          let order = (i + 1) % COL_COUNT || COL_COUNT;
+          container.children[i].style.order = order;
+          col_heights[order] += parseFloat(container.children[i].style.height);
+        }
+
+        const highest = Math.max.apply(Math, col_heights);
+        container.style.height = highest + 'px';
+      </script>
     </body>
   <footer>
     <!-- <svg classe="foot" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#273036" fill-opacity="1" d="M0,128L120,117.3C240,107,480,85,720,90.7C960,96,1200,128,1320,144L1440,160L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path></svg>
