@@ -1,0 +1,137 @@
+body {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* ----- SECTION 1 ----- */
+
+#sec-1  {
+  height: 100vh;
+  width: 100vw;
+  background-color: #f6f6f6;
+  position: relative;
+  z-index: -2;
+}
+
+#sec-1 svg {
+  padding: 15px;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  box-sizing: border-box;
+  z-index: -1;
+}
+
+.container {
+  display: flex;
+}
+
+.container a {
+  margin-left: 5%;
+  margin-top: 5%;
+}
+
+#logo {
+  height: 100px;
+  width: auto;
+  opacity: 1;
+  position: relative;
+  z-index: 3;
+}
+
+#logo:hover {
+  opacity: 0.3;
+  position: relative;
+  z-index: 2;
+}
+
+rect {
+  stroke: #000000;
+  width: 100%;
+  height: 100%;
+  fill-opacity: 0;
+  stroke-width: 1%;
+  stroke-dasharray: 30 25;
+  stroke-dashoffset: 16px;
+}
+
+#hello {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-content: flex-end;
+  align-items: flex-end;
+}
+
+h1 {
+  color: white;
+  text-align: right;
+  font-family: Helvetica;
+  margin-right: 18px;
+  margin-top: 5px;
+  font-size: 2em;
+}
+
+.box1, .box2, .box3 {
+  background-color: #000000;
+  margin-right: 100px;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+}
+
+.box1 {
+  height: 40px;
+  width: 120px;
+}
+
+.box2 {
+  height: 40px;
+  width: 210px;
+}
+
+.box3 {
+  height: 40px;
+  width: 77px;
+}
+
+/* ----- SECTION 2 ----- */
+
+#sec-2 {
+  padding: 20px;
+  border: 2px solid red;
+  max-width: 90%;
+  margin: auto;
+}
+
+#block-wrapper {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.block {
+  padding: 20px;
+  flex: 1 0 auto;
+  overflow: hidden;
+}
+
+.inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex: 1 0 auto;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  min-height: 100px;
+  border: 1px solid black;
+  background: Gainsboro;
+}
