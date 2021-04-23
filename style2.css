@@ -107,8 +107,7 @@ h1 {
 
 #sec-2 {
   padding: 20px;
-  border: 2px solid red;
-  max-width: 90%;
+  max-width: 100%;
   margin: auto;
 }
 
@@ -133,7 +132,9 @@ h1 {
   font-size: 3em;
   min-height: 100px;
   border: 1px solid black;
-  background: Gainsboro;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .card-1 {
